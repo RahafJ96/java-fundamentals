@@ -13,7 +13,7 @@ public class Library {
         Random diceValue = new Random();
         int [] arr = new int[num];
         for(int i = 0 ; i < num ; i++){
-            int randomValue = diceValue.nextInt(6-1+1)+1;
+            int randomValue = diceValue.nextInt(6)+1;
             arr[i] = randomValue;
         }
         return arr;
@@ -26,11 +26,11 @@ public class Library {
             value = arr[i];
             for(int j = i +1 ; i < arr.length ; i++){
                 if(arr[j] == value){
-                    return true;
+                    return false;
                 }
             }
         }
-        return  false;
+        return  true;
     }
 
     public static double calculateAverage(double [] arr){
