@@ -19,17 +19,16 @@ public class Library {
     public static void main(String[] args) throws IOException {
         String ttt = File.separator;
         String basePath = new File("").getCanonicalPath();
-//        String path = new File("src/main/resources/gates.js")
-//                .getAbsolutePath();
+
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
-        Path p1;
+        Path path1;
         if (ttt.equals("\\")){
-            p1 = Paths.get(basePath+"/lib/src/main/resources/gates.js");
+            path1 = Paths.get(basePath+"/lib/src/main/resources/gates.js");
         }else{
-            p1 = Paths.get(basePath+"/lib/main/resources/gates.js");
+            path1 = Paths.get(basePath+"/lib/main/resources/gates.js");
         }
-        System.out.println(p1);
-        missingSemicolon(p1);
+        System.out.println(path1);
+        missingSemicolon(path1);
     }
 
     public static HashMap<String, Integer> missingSemicolon(Path p1){
@@ -37,9 +36,9 @@ public class Library {
         int lineNum = 0;
         try {
             File file = new File(String.valueOf(p1));    //creates a new file instance
-            FileReader fr = new FileReader(file);   //reads the file
-            BufferedReader br = new BufferedReader(fr);  //creates a buffering character input stream
-            StringBuffer sb = new StringBuffer();    //constructs a string buffer with no characters
+            FileReader fileReader = new FileReader(file);   //reads the file
+            BufferedReader br = new BufferedReader(fileReader);  //creates a buffering character input stream
+            StringBuffer strBuffer = new StringBuffer();    //constructs a string buffer with no characters
             String line;
 
             while ((line = br.readLine()) != null) {
@@ -55,10 +54,10 @@ public class Library {
                     errorNum = errorNum + 1;
                     System.out.println("Line " + lineNum + ": Missing semicolon.");
                 }
-                sb.append(line);      //appends line to string buffer
-                sb.append("\n");     //line feed
+                strBuffer.append(line);      //appends line to string buffer
+                strBuffer.append("\n");     //line feed
             }
-            fr.close();    //closes the stream and release the resources
+            fileReader.close();    //closes the stream and release the resources
 
         } catch (IOException e) {
             e.printStackTrace();
