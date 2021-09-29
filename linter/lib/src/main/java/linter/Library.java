@@ -16,13 +16,40 @@ public class Library {
         return true;
     }
 
+
+
+
     public static void main(String[] args) throws IOException {
-        String ttt = File.separator;
+
+        //    int[][] weeklyMonthTemperatures = {
+  //              {66, 64, 58, 65, 71, 57, 60},
+  //              {57, 65, 65, 70, 72, 65, 51},
+  //              {55, 54, 60, 53, 59, 57, 61},
+  //              {65, 56, 55, 52, 55, 62, 57}
+  //      };
+ //       temp(weeklyMonthTemperatures);
+ //       System.out.println(temp(weeklyMonthTemperatures));
+//          System.out.println("-------------------------------------");
+ //       List<String> votes = new ArrayList<>();
+ //       votes.add("Bush");
+ //       votes.add("Bush");
+ //       votes.add("Bush");
+//        votes.add("Hedge");
+ //       votes.add("Shrub");
+ //       votes.add("Bush");
+  //      votes.add("Hedge");
+  //      votes.add("Bush");
+//
+ //       String winner = tally(votes);
+
+  //      System.out.println(winner + " received the most votes!");
+  //      System.out.println("----------------------------------------------------");
+        String sepFile = File.separator;
         String basePath = new File("").getCanonicalPath();
 
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
         Path path1;
-        if (ttt.equals("\\")){
+        if (sepFile.equals("\\")){
             path1 = Paths.get(basePath+"/lib/src/main/resources/gates.js");
         }else{
             path1 = Paths.get(basePath+"/lib/main/resources/gates.js");
@@ -32,8 +59,8 @@ public class Library {
     }
 
     public static HashMap<String, Integer> missingSemicolon(Path p1){
-        int errorNum = 0;
-        int lineNum = 0;
+        int errorNumber = 0;
+        int lineNumber = 0;
         try {
             File file = new File(String.valueOf(p1));    //creates a new file instance
             FileReader fileReader = new FileReader(file);   //reads the file
@@ -42,7 +69,7 @@ public class Library {
             String line;
 
             while ((line = br.readLine()) != null) {
-                lineNum = lineNum + 1;
+                lineNumber = lineNumber + 1;
                 if (!line.contains(";")
                         && !line.endsWith("}")
                         && !line.endsWith("{")
@@ -51,8 +78,8 @@ public class Library {
                         && !line.startsWith("//")
                         && !line.isBlank()
                 ) {
-                    errorNum = errorNum + 1;
-                    System.out.println("Line " + lineNum + ": Missing semicolon.");
+                    errorNumber = errorNumber + 1;
+                    System.out.println("In Line " + lineNumber + ": Missing semicolon.");
                 }
                 strBuffer.append(line);      //appends line to string buffer
                 strBuffer.append("\n");     //line feed
@@ -64,8 +91,8 @@ public class Library {
         }
         HashMap<String, Integer> lines= new HashMap<>();
 
-        lines.put("ErrorCount", errorNum);
-        lines.put("LineCount", lineNum);
+        lines.put("ErrorCount", errorNumber);
+        lines.put("LineCount", lineNumber);
 
         return lines;
     }
