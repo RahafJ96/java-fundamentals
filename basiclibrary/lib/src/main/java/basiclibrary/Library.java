@@ -9,132 +9,146 @@ public class Library {
         return true;
     }
 
-    static int[] roll (int n) {
-        Random rnd = new Random();
-        int dice[] = new int[n];
-        for (int i = 0; i < n; i++) {
-            dice[i] = rnd.nextInt(6) + 1;
+    static int[][] weeklyMonthTemperatures = {
+            {66, 64, 58, 65, 71, 57, 60},
+            {57, 65, 65, 70, 72, 65, 51},
+            {55, 54, 60, 53, 59, 57, 61},
+            {65, 56, 55, 52, 55, 62, 57}
+    };
+    //Case 1
+    public static int[] roll(int n){
+        int rolls [] =new int[n];
+        for(int i=0;i<rolls.length;i++){
+            int randomRolls=(int)Math.ceil(Math.random() * 6);
+            rolls[i]=randomRolls;
         }
-        return dice;
+        return rolls;
+
     }
 
-    static boolean containsDuplicates (int[] arr) {
-        int currItem;
-        for (int i = 0; i < arr.length; i++) {
-            currItem = arr[i];
-            for (int j = i+1; j < arr.length; j++) {
-                if(arr[j] == currItem){
-                    return false;
-                }
-            }
-        }
+    public static boolean containsDuplicates(int [] array){
+        for(int i=0;i<array.length;i++) {
+            for(int j=i+1;j<array.length;j++){
+                if(array[i]==array[j]){
+                    System.out.println("the duplicated value is => "+ array[j]);
+                    return true;
 
-        return true;
+                }
+
+            }
+
+        }
+        return false;
     }
 
-    static double findAverage(int [] integers) {
-        double sum = 0 ;
-        for (int i = 0; i < integers.length; i++) {
-            sum += integers[i];
+    public static double average(int [] arr){
+        int sum=0;
+        for (int i=0;i<arr.length;i++) {
+            sum+=arr[i];
         }
-
-        return sum/integers.length;
+        return sum/arr.length;
     }
-    int analyzeWeatherData (int[][] arr) {
-        Set <Integer> dataWeather = new HashSet<>();
-        int min = Integer.MAX_VALUE , max = Integer.MIN_VALUE ;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                dataWeather.add(arr[i][j]);
-                if(arr[i][j] < min) {
-                    min = arr[i][j];
-                }
-                else if (arr[i][j] > max ) {
-                    max = arr[i][j];
-                }
+    public static int[] arrayOfArray(int [] [] matrix){
+        int rowSum=0;
+        int total=0;
+        int[]rowAvg=new int[matrix.length];
+        for(int row=0;row<matrix.length;row++){
+            rowSum=0;
+            for (int column=0;column<matrix[row].length;column++){
+                rowSum+=matrix[row][column];
+                //total += matrix[row][column];
             }
-        }
-        System.out.println("Maximum: " + max);
-        System.out.println("Minimum: " + min);
-        int tempMin = min;
-        for (int i = min; i <= max; i++) {
-            if (!dataWeather.contains(i)){
-                System.out.println("Temperature: " + tempMin);
-            }
-            tempMin++;
-        }
+            rowAvg[row]=rowSum/matrix[row].length;
 
-        return max;
+        }
+        return rowAvg;
     }
 
     //    Method to analyze given weather data as an array of arrays
 //    prints the minimum and maximum values
 //    prints the temperatures between minimum and maximum data that hasn't showed up
-    static int[] lowestAverage(int[][] arr) {
-        double avg = 0 , minAvg = Integer.MAX_VALUE;
-        int minAvgArr[] = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            avg = 0;
-            for (int j = 0 ; j < arr[i].length ; j++){
-                avg+=arr[i][j];
+    public static void lowestAndHighestAvg(int[]temp){
+        int min=temp[0];
+        int max=temp[0];
+        for(int i=1;i<temp.length;i++){
+            if(temp[i]<min){
+                min=temp[i];
             }
-            avg /= arr[i].length;
-            if(avg < minAvg) {
-                minAvg = avg;
-                minAvgArr = arr[i];
-            }
-
         }
-        return minAvgArr;
+        for(int i=1;i<temp.length;i++){
+            if(temp[i]>max){
+                max=temp[i];
+            }
+        }
+        System.out.println("lowest temp  => "+min);
+        System.out.println("highest temp  => "+max);
     }
 
-    String tally(List<String> votes) {
-        Map<String , Integer> candidates = new HashMap<>();
-        for (int i = 0; i < votes.size(); i++) {
-            candidates.put(votes.get(i) , 0);
-        }
-        int totalVotes = 0 , max = 0;
-        for (int i = 0; i < votes.size(); i++) {
-            totalVotes = candidates.get(votes.get(i));
-            candidates.put(votes.get(i) , ++totalVotes);
-        }
-        String winner = "";
-        Object[] arr = candidates.keySet().toArray();
-        for (int i = 0; i < candidates.size(); i++) {
-            if(candidates.get(arr[i]) > max) {
-                max = candidates.get(arr[i]);
-                winner = arr[i].toString();
+    // lab 02
+
+    public static void  weatherData(int [][] weatherMatrix){
+        int maxNum = weatherMatrix[0][0];
+        int minNum = weatherMatrix[0][0];
+        for (int i = 0; i < weatherMatrix.length; i++) {
+            for (int j = 0; j < weatherMatrix[i].length; j++) {
+                if(maxNum < weatherMatrix[i][j]){
+                    maxNum = weatherMatrix[i][j];
+                }else if(minNum > weatherMatrix[i][j]){
+                    minNum = weatherMatrix[i][j];
+                }
             }
         }
+
+        System.out.println("max temp: "+maxNum);
+        System.out.println(" min temp: " + minNum);
+        findNotSeenTemp(maxNum,minNum,weatherMatrix);
+    }
+    public static void findNotSeenTemp(int max,int min,int[][] matrix){
+        Set<Integer> setOfTemp=new HashSet();
+
+        for(int j=0;j<matrix.length;j++){
+            for(int x=0;x<matrix[j].length;x++){
+                setOfTemp.add(matrix[j][x]);
+            }
+        }
+        //System.out.println("full matrix "+ setOfTemp);
+
+        for (int i = min; i < max; i++) {
+            if (!setOfTemp.contains(i)){
+                System.out.println ("Never saw temperature: " + i);
+            }
+        }
+    }
+
+    public static String tally(List <String> votes){
+        Map<String, Integer> NameAndVotes= new HashMap<String, Integer>();
+        String winner="";
+        for(String s: votes){
+            NameAndVotes.put(s,Collections.frequency(votes,s));
+        }
+        System.out.println(NameAndVotes);
+        int winnerNoVotes = (Collections.max(NameAndVotes.values()));
+        for (Map.Entry<String, Integer> entry : NameAndVotes.entrySet()){
+            if (entry.getValue() == winnerNoVotes) {
+                winner= entry.getKey();
+            }
+        }
+        System.out.println(winner);
 
         return winner;
     }
+
+
     public static void main(String[] args) {
-//        int xRoll[] = roll(4);
-//            System.out.println(Arrays.toString(xRoll));
-//
-//        int x[] = {1,2,3,4,44,5,44};
-//        System.out.println(containsDuplicates(x));
-//        System.out.println(findAverage(x));
-//
-//        int[][] weeklyMonthTemperatures = {
-//                {66, 64, 58, 65, 71, 57, 60},
-//                {57, 65, 65, 70, 72, 65, 51},
-//                {55, 54, 60, 53, 59, 57, 61},
-//                {65, 56, 55, 52, 55, 62, 57}
-//        };
-//
-//        int xx[] = lowestAverage(weeklyMonthTemperatures);
-//        System.out.println(Arrays.toString(xx));
+        System.out.println(Arrays.toString(roll(5)));
+        int[] myArray = new int[]{1,2,3,3,5,10};
 
-        int[][] arr = {
-                {66, 64, 58, 65, 71, 57, 60},
-                {57, 65, 65, 70, 72, 65, 51},
-                {55, 54, 60, 53, 59, 57, 61},
-                {65, 56, 55, 52, 55, 62, 57}
-        };
+        System.out.println(containsDuplicates(myArray));
+        System.out.println(average(myArray));
+        lowestAndHighestAvg((arrayOfArray(weeklyMonthTemperatures)));
+        weatherData(weeklyMonthTemperatures);
 
-        new Library().analyzeWeatherData(arr);
+
         List<String> votes = new ArrayList<>();
         votes.add("Bush");
         votes.add("Bush");
@@ -146,7 +160,8 @@ public class Library {
         votes.add("Hedge");
         votes.add("Bush");
 
-        String winner = new Library().tally(votes);
+        String winner = tally(votes);
         System.out.println(winner + " received the most votes!");
+
     }
 }
