@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="48ebf601-4345-490a-a5b5-396b8d84e813" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basiclibrary/.idea/modules/lib/basiclibrary.lib.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/basiclibrary/.gradle/4.4.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basiclibrary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/basiclibrary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basiclibrary/build/classes/java/main/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/basiclibrary/build/classes/java/main/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basiclibrary/src/main/java/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/basiclibrary/src/main/java/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/basics/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basics/out/production/basics/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/basics/out/production/basics/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +42,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/basiclibrary" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
