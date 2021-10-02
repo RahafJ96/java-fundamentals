@@ -125,6 +125,7 @@ public class Library {
 //        };
 //
 //        int xx[] = lowestAverage(weeklyMonthTemperatures);
+//        int xx[] = lowestAverage(weeklyMonthTemperatures);
 //        System.out.println(Arrays.toString(xx));
 
         int[][] arr = {

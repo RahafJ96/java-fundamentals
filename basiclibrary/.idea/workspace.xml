@@ -11,15 +11,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/build/reports/tests/test/classes/basiclibrary.LibraryTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/reports/tests/test/classes/basiclibrary.LibraryTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/build/reports/tests/test/packages/basiclibrary.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/reports/tests/test/packages/basiclibrary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/build/test-results/test/TEST-basiclibrary.LibraryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/test-results/test/TEST-basiclibrary.LibraryTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/basiclibrary/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/basiclibrary/Library.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Gradle.basiclibrary [dependencies]">
+  <component name="RunManager" selected="Application.Library">
     <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="basiclibrary.Library" />
       <module name="basiclibrary.lib.main" />
@@ -108,6 +106,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in 'basiclibrary.lib'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lib:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="basiclibrary [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -131,6 +150,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'basiclibrary.lib'" />
         <item itemvalue="Gradle.basiclibrary [dependencies]" />
         <item itemvalue="Gradle.LibraryTest" />
         <item itemvalue="Gradle.Tests in 'basiclibrary'" />
