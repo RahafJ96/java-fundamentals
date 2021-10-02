@@ -41,9 +41,9 @@ class LibraryTest {
         votes.add("snape");
         votes.add("voldemort");
         votes.add("snape");
-        votes.add("harry_potter");
+        votes.add("testing");
         votes.add("snape");
-        votes.add("harry_potter");
+        votes.add("testing");
 
         assertEquals("snape", test.tally(votes),"tally votes should work");
     }
