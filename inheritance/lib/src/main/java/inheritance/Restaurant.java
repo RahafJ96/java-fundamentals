@@ -1,64 +1,49 @@
 package inheritance;
-
 import java.util.ArrayList;
-import java.util.List;
 
-public class Restaurant implements User {
-    public String name ;
-    private int rate ;
-    private String priceCategory;
-    private List<Review> reviews = new ArrayList<>();
+public class Restaurant extends Review {
 
-    public Restaurant(String name, String priceCategory) {
+    /*
+     * Each Restaurant should have a name,
+     * a number of stars between 0 and 5,
+     * and a price category (i.e. number of dollar signs).
+     * */
+
+    String name;
+    double stars;
+    String priceCat="JD";
+
+    //
+    private int starsSum=0;
+    private int revCounter=0;
+    //
+    protected ArrayList<Review> reviews=new ArrayList<>();
+
+
+    public Restaurant(String name, String priceCat) {
         this.name = name;
-        this.rate = 0;
-        this.priceCategory = priceCategory;
+        this.priceCat = priceCat;
     }
 
-
-    public String getName() {
-        return name;
-    }
-
-    public int getRate() {
-        return rate;
-    }
-
-    public String getPriceCategory() {
-        return priceCategory;
-    }
-
-
-    public List<Review> getReviewsgetReviews() {
-        return reviews;
-    }
-
-    @Override
-    public Review addReview(String body, String author, int stars) {
-        Review newReview = new Review(body , author , stars);
-        reviews.add(newReview);
-        updateRate(reviews);
-        return newReview;
-    }
-
-
-    private void updateRate(List<Review> reviews) {
-        int sum = 0;
-        for (Review r : reviews) {
-            sum += r.starNo;
+    public void addReview(double rate,String body,String author){
+        if (rate>0&&rate<=5){
+            Review rev=new Review(rate,body,author);
+            this.starsSum+= rev.getRate();
+            this.revCounter+=1;
+            this.rate=this.starsSum/this.revCounter;
+            this.reviews.add(rev);
+        }else {
+            System.out.println("Please add number between 0 and 5");
+            return;
         }
 
-        this.rate = sum / reviews.size();
     }
-
     @Override
     public String toString() {
         return "Restaurant{" +
                 "name='" + name + '\'' +
-                ", rate=" + rate +
-                ", priceCategory='" + priceCategory + '\'' +
-                ", reviews=" + reviews +
-                '}';
+                ", stars=" + rate +
+                ", priceCat='" + priceCat + '\'' +
+                "}\n "+ "all reviews: "+" \n"+reviews;
     }
-
 }
