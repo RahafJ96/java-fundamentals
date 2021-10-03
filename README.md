@@ -25,4 +25,15 @@ In this repo you can check some java fundamentals for practicing Java starting f
   - `line contains else`
   - `line starts With //`
   - `empty lines`
-  
+
+## Inheritance
+ - **Restaurant:** In this class there is a constructor to define the variables and there are getters and setters
+    - There is an array list to store all the reviews for a restaurant
+    - When a review is added the stars for that restaurant is going to change according to the average of the stars
+    - There is toString method to print all the defined fields
+ - **Review:** In this class there is a constructor to define the variables and there are getters and setters
+   - I created a field with type of restaurant to associate the restaurant with multiple reviews
+   - a plural method to return if the stars are plural or singular
+   - there is toString method to print all the defined fields
+ - **AddReview:** In this interface there is a method that accepts a Review object
+
