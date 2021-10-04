@@ -38,7 +38,8 @@ In this repo you can check some java fundamentals for practicing Java starting f
  - **AddReview:** In this interface there is a method that accepts a Review object
 
 =======     =======    =======   =======  ======= =======
-## Lab06 & Lab07 : Composition and Inheritance
+## Composition and Inheritance
+*Lab06 and lab07*
 
 **Finished Tasks :**<br>
 **Add a Review for Restaurants :**
