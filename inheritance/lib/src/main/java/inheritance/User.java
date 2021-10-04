@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class User extends Review{
     String name;
 
-    public void findReviews(ArrayList<Review> rev,String n) {
-        for (Review element : rev) {
+    public void findReviews(ArrayList<Review> reviewUser,String n) {
+        for (Review element : reviewUser) {
 
             if (element.toString().contains(n)) {
                 System.out.println("We are Sorry "+n+", you can't add multiple reviews");
