@@ -1,18 +1,29 @@
 package inheritance;
 
-
+import java.util.*;
+import java.util.List;
 
 public class Review {
 
     double rate;
     String body;
     String author;
+    String movieName;
 
     public Review(double rate, String body, String author) {
         this.rate = rate;
         this.body = body;
         this.author = author;
+        this.movieName=movieName;
     }
+    public Review(String body,String author,double rate,String movieName){
+
+        this.body=body;
+        this.author=author;
+        this.rate=rate;
+        this.movieName=movieName;
+    }
+
     public Review() {
         setRate(rate);
     }
@@ -48,6 +59,17 @@ public class Review {
     public void updateRate(double rate) {
         validateRate(rate);
         this.rate = rate;
+    }
+    public void updateStars(String author,double newStar, Restaurant restaurantCurrent){
+        for(Review restaurants : restaurantCurrent.reviews){
+            if(restaurants.author==author){
+                this.rate=newStar;
+                //restaurantCurrent.calculateStars();
+                System.out.println("from update stars"+newStar+" "+restaurantCurrent.reviews);
+                return;
+            }
+        }
+        System.out.println("No match Found!");
     }
 
     public String validateRate(double number) {
