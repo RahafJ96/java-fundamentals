@@ -37,3 +37,25 @@ In this repo you can check some java fundamentals for practicing Java starting f
    - there is toString method to print all the defined fields
  - **AddReview:** In this interface there is a method that accepts a Review object
 
+=======     =======    =======   =======  ======= =======
+## Composition and Inheritance
+*Lab06 and lab07*
+
+**Finished Tasks :**<br>
+**Add a Review for Restaurants :**
+- Create a class to represent a Restaurant. Each Restaurant should have a name, a number of stars between 0 and 5, and a price category
+- Create a class to represent a Review. Each Review should have a body, an author, and a number of stars.
+- A Review should be about a single Restaurant. Choose an implementation for this, and implement it.
+- Add an instance method addReview to your Restaurant class. This method should take in a Review instance, and associate that review with this Restaurant
+- When you associate a review with a restaurant, that restaurant’s star rating should change. Ensure that your addReview method updates the Restaurant star rating appropriately
+<hr>
+
+**Finished Tasks :**<br>
+**Shops,Theater & Movies:**
+- The users want shops! Create a Shop class; a Shop should have a name, description, and number of dollar signs.
+- The users also want to review shops
+- The users want theaters! Create a Theater class; a Theater should have a name and all the movies currently showing there
+- Review all the things
+- Users are frustrated: they like having a body, an author, and a number of stars, but when they’re reviewing a Theater, they also want to specify which movie they saw.
+
+
