@@ -5,12 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Shop extends  Review implements AddReview {
-    /*
-     *  a Shop should have a name,
-     *  description,
-     * and number of dollar signs.
-     *
-     * */
+
     String shopName;
     String shopDescription;
 
@@ -35,7 +30,7 @@ public class Shop extends  Review implements AddReview {
             rev.rate=this.starsSum/this.revCounter;
             this.reviews.add(rev);
         }else {
-            System.out.println("Please add number beteen 0 and 5");
+            System.out.println("Please add number between 0 and 5");
             return;
         }
 

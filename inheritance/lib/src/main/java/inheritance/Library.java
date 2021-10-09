@@ -9,7 +9,7 @@ public class Library {
     }
 
     public static void main(String[] args) {
-        Restaurant restaurantReview=new Restaurant("Eater's","JD");
+        Restaurant restaurantReview=new Restaurant("Eater's","$$");
 
         restaurantReview.addReview(5,"I really liked the burger","Rahaf");
         restaurantReview.addReview(2.5,"The food was cold, but liked the view :(","Ola");

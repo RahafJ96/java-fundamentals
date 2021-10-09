@@ -25,7 +25,7 @@ public class Theater extends Review implements AddReview{
             rev.rate=this.starsSum/this.revCounter;
             this.reviews.add(rev);
         }else {
-            System.out.println("Please add number beteen 0 and 5");
+            System.out.println("Please add number between 0 and 5");
             return;
         }
 
@@ -46,8 +46,7 @@ public class Theater extends Review implements AddReview{
             }
         }
         else{
-            System.out.println("ummmm, we think you've watched this movie on another theater but we'll add the movie and your review have a nice day!");
-            //addReview(movieName,rate,body,author);
+            System.out.println("The movie is not here");
             if (rate>0&&rate<=5){
                 Review rev=new Review(body,author,rate,movieName);
                 this.starsSum+= rev.getRate();
@@ -56,7 +55,7 @@ public class Theater extends Review implements AddReview{
                 rev.rate=this.starsSum/this.revCounter;
                 this.reviews.add(rev);
             }else {
-                System.out.println("Please add number beteen 0 and 5");
+                System.out.println("Please add number between 0 and 5");
                 return;
             }
             addMovie(movieName);
