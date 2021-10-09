@@ -2,11 +2,10 @@ package inheritance;
 import java.util.ArrayList;
 
 public class Restaurant extends Review {
-    // Each Restaurant should have a name, the rate out of 5 and a price category ($,JD).
 
     String name;
     double stars;
-    String currency="JD";
+    String priceCat="$";
 
     //
     private int rateSum=0;
@@ -14,9 +13,9 @@ public class Restaurant extends Review {
     //
     public ArrayList<Review> reviews=new ArrayList<>();
 
-    public Restaurant(String name, String currency) {
+    public Restaurant(String name, String pricCat) {
         this.name = name;
-        this.currency = currency;
+        this.priceCat = pricCat;
     }
 
     public void addReview(double rate,String body,String author){
@@ -37,7 +36,7 @@ public class Restaurant extends Review {
         return "Restaurant{" +
                 "name='" + name + '\'' +
                 ", stars=" + rate +
-                ", priceCat='" + currency + '\'' +
+                ", priceCat='" + priceCat + '\'' +
                 "}\n "+ "all reviews: "+" \n"+reviews;
     }
 }

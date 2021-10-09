@@ -82,6 +82,6 @@ public class Review {
     }
     @Override
     public String toString() {
-        return "review {" + "rate=" + rate + ", body='" + body + '\'' + ", author '" + author + '\'' + '}';
+        return "Review {" + "rate=" + rate + ", body='" + body + '\'' + ", author='" + author + '\'' + '}';
     }
 }
